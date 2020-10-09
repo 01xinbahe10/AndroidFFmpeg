@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".player.MainActivity">
+
+        <com.video.ffmpeg.jniapi.FFPlayer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/d_pressed_add"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_list"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_list"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:src="@drawable/d_pressed_list"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_add"
+            app:layout_constraintLeft_toRightOf="@+id/iv_add"
+            app:layout_constraintTop_toTopOf="@+id/iv_add" />
+
+
+        <ImageView
+            android:id="@+id/iv_pause"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:src="@drawable/d_level_play_state"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_list"
+            app:layout_constraintLeft_toRightOf="@+id/iv_list"
+            app:layout_constraintTop_toTopOf="@+id/iv_list" />
+
+
+        <ImageView
+            android:id="@+id/iv_fast_rewind"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:src="@drawable/d_pressed_fast_rewind"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_list"
+            app:layout_constraintLeft_toRightOf="@+id/iv_pause"
+            app:layout_constraintTop_toTopOf="@+id/iv_list" />
+
+
+        <ImageView
+            android:id="@+id/iv_fast_forward"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:src="@drawable/d_pressed_fast_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_list"
+            app:layout_constraintLeft_toRightOf="@+id/iv_fast_rewind"
+            app:layout_constraintTop_toTopOf="@+id/iv_list" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

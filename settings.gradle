@@ -1,2 +1,2 @@
-rootProject.name='MineFFmpeg'
+rootProject.name='AndroidFFmpeg'
 include ':app'
